@@ -13,15 +13,12 @@ const App: React.FC<{}> = () => {
     }
   }, [isDarkMode]);
 
-  return <div style={{
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  }}>
-    <img className="icon" src={craftXIconSrc} alt="CraftX logo" />
-    <button className={`btn ${isDarkMode ? "dark" : ""}`} onClick={insertHelloWorld}>
-      Hello world!
-    </button>
+  return <div id="main">
+    <form id="upload">
+      <label htmlFor="file">Libby json file to upload</label>
+      <input type="file" id="file" accept=".json"></input>
+      <button>Upload</button>
+    </form>
   </div>;
 }
 

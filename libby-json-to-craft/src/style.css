@@ -1,3 +1,4 @@
+/* Default CSS from template */
 body {
   background-color: white;
 }
@@ -38,4 +39,15 @@ body.dark {
 
 .btn.dark:active {
   background-color: #303030;
+}
+/* Default CSS from template - end */
+
+/* My CSS */
+#main {
+  text-align: center;
+}
+#upload > *{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
