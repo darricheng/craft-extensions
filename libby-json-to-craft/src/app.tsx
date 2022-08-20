@@ -39,7 +39,6 @@ const App: React.FC<{}> = () => {
           if (e.target != null) { // Workaround TypeScript error that warns e.target might be null
             let str = e.target.result as string; // Types e.target.result as a string, else TS will throw an error
             let json = JSON.parse(str);
-            console.log(json);
 
             // Store highlights arr in a variable so that it's easier to work with
             let highlightsArr = json.highlights;
@@ -49,7 +48,18 @@ const App: React.FC<{}> = () => {
             for (let i = 0; i < highlightsArr.length; i++) {
               quotes.push(highlightsArr[i].quote);
             }
-            console.log(quotes);
+
+            // Initialise a new array to store the Craft blocks to be created
+            const blocks = [];
+            // Iterate through the quotes array to add content as Craft block data in the blocks array
+            for (let i = 0; i < quotes.length; i++) {
+              blocks.push(craft.blockFactory.textBlock({
+                content: quotes[i]
+              }));
+            }
+
+            // Add the blocks to the current page
+            craft.dataApi.addBlocks(blocks);
           }
         };
         

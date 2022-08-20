@@ -1,10 +1,10 @@
 {
-  "id": "do.craft.template.typescript-react",
-  "name": "Typescript/React extension template",
-  "fileName": "typescript-react-extension",
-  "author" : "Craft Docs",
-  "author-email" : "team@craft.do",
-  "description" : "Template for creating Craft Docs extensions with Typescript and React",
+  "id": "do.craft.libbyapp-export",
+  "name": "Libby Highlights to Craft",
+  "fileName": "libbyapp-export",
+  "author" : "Darric Heng",
+  "author-email" : "darricheng@gmail.com",
+  "description" : "Parses highlights from the Libby app in JSON format to Craft data",
   "api": "0.0.4",
   "main": "index.html"
 }
