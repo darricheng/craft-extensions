@@ -39,7 +39,17 @@ const App: React.FC<{}> = () => {
           if (e.target != null) { // Workaround TypeScript error that warns e.target might be null
             let str = e.target.result as string; // Types e.target.result as a string, else TS will throw an error
             let json = JSON.parse(str);
-            console.log('json', json);
+            console.log(json);
+
+            // Store highlights arr in a variable so that it's easier to work with
+            let highlightsArr = json.highlights;
+            
+            let quotes = [];
+            // Iterate through highlights array to extract the quotes, then store in a new quotes array
+            for (let i = 0; i < highlightsArr.length; i++) {
+              quotes.push(highlightsArr[i].quote);
+            }
+            console.log(quotes);
           }
         };
         
